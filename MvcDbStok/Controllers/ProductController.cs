@@ -32,9 +32,19 @@ namespace MvcDbStok.Controllers
         [HttpPost]
         public ActionResult YeniUrun(URUNLER urun)
         {
+            var ct = db.KATEGORILER.Where(x => x.KATEGORIID == urun.KATEGORILER.KATEGORIID).FirstOrDefault();
+            urun.KATEGORILER = ct;
             db.URUNLER.Add(urun);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Sil(int id)
+        {
+            var product = db.URUNLER.Find(id);
+            db.URUNLER.Remove(product);
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

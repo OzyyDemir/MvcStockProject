@@ -1,4 +1,4 @@
-﻿@model MvcDbStok.Models.Entity.KATEGORILER
+﻿@model MvcDbStok.Models.Entity.URUNLER
 @{
     ViewBag.Title = "YeniUrun";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -15,7 +15,7 @@
     </div>
     <div>
         <label>Kategori</label>
-        @Html.DropDownListFor(x=>x.KATEGORIAD,(List<SelectListItem>)ViewBag.vl, new { @class="form-control" })
+        @Html.DropDownListFor(x=>x.KATEGORILER.KATEGORIID,(List<SelectListItem>)ViewBag.vl, new { @class="form-control" })
     </div>
     <div>
         <label>Fiyat</label>
