@@ -1,5 +1,7 @@
 ﻿@using MvcDbStok.Models.Entity
-@model List<KATEGORILER>
+@using PagedList
+@using PagedList.Mvc
+@model PagedList.IPagedList<KATEGORILER>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
@@ -24,4 +26,6 @@
         }
     </tbody>
 </table>
+@Html.PagedListPager((IPagedList)Model,page=>Url.Action("Index", new { page}))
+
 <a href="/Category/YeniKategori/" class="btn btn-info">Yeni Kategori</a>

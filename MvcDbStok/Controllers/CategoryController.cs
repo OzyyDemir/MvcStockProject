@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MvcDbStok.Models.Entity;
+using PagedList;
+using PagedList.Mvc;
 
 namespace MvcDbStok.Controllers
 {
@@ -11,9 +13,10 @@ namespace MvcDbStok.Controllers
     {
         // GET: Category
         MvcDbStokEntities db = new MvcDbStokEntities();
-        public ActionResult Index()
+        public ActionResult Index(int page=1)
         {
-            var values = db.KATEGORILER.ToList();
+            //var values = db.KATEGORILER.ToList();
+            var values = db.KATEGORILER.ToList().ToPagedList(page, 4);
             return View(values);
         }
         [HttpGet]
