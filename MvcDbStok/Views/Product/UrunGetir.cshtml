@@ -1,0 +1,34 @@
+﻿@model MvcDbStok.Models.Entity.URUNLER
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Product", FormMethod.Post))
+{
+<div class="form-group">
+    @Html.LabelFor(x => x.URUNID)
+    @Html.TextBoxFor(x => x.URUNID, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.URUNAD)
+    @Html.TextBoxFor(x => x.URUNAD, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.MARKA)
+    @Html.TextBoxFor(x => x.MARKA, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.URUNKATEGORI)
+    @Html.TextBoxFor(x => x.URUNKATEGORI, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.FIYAT)
+    @Html.TextBoxFor(x => x.FIYAT, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.STOK)
+    @Html.TextBoxFor(x => x.STOK, new { @class = "form-control" })
+
+</div>
+
+    <div>
+        <button class="btn btn-warning">Güncelle</button>
+    </div>
+}
+
