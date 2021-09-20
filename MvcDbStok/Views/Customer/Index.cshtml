@@ -12,6 +12,7 @@
         <th>Müşteri Soyadı</th>
         <th>Sil</th>
         <th>Güncelle</th>
+        <th>Alert</th>
     </tr>
     <tbody>
         @foreach (var item in Model)
@@ -22,6 +23,7 @@
                 <td>@item.MUSTERISOYAD</td>
                 <td><a href="/Customer/Sil/@item.MUSTERIID" class="btn btn-danger">SİL</a></td>
                 <td><a href="/Customer/MusteriGetir/@item.MUSTERIID" class="btn btn-success">GÜNCELLE</a></td>
+                <td>@Html.ActionLink("BtnSil", "Sil", new { id=item.MUSTERIID }, new { @class = "btn btn-warning", onclick = "return confirm('Silmek istediğinize emin misiniz?')" })</td>
             </tr>
         }
     </tbody>

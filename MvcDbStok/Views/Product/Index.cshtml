@@ -5,17 +5,19 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<table class="table table-bordered">
-    <tr>
-        <th>Ürün Id</th>
-        <th>Ürün Adı</th>
-        <th>Marka</th>
-        <th>Kategori</th>
-        <th>Fiyat</th>
-        <th>Stok</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
-    </tr>
+<table id="tbl1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Ürün Id</th>
+            <th>Ürün Adı</th>
+            <th>Marka</th>
+            <th>Kategori</th>
+            <th>Fiyat</th>
+            <th>Stok</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
+        </tr>
+    </thead>
     <tbody>
         @foreach (var item in Model)
         {
@@ -33,5 +35,16 @@
     </tbody>
 </table>
 <a href="/Product/YeniUrun/" class="btn btn-info">Yeni Ürün</a>
+<script src="ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<link href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+<script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+
+
+<script>
+    $('#tbl1').dataTable({});
+</script>
 
 
