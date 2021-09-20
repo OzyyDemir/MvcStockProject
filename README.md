@@ -27,6 +27,9 @@
 #### Product Page
 ![7](https://user-images.githubusercontent.com/74780105/133838229-c918af39-e1da-4060-9e25-749c3705cd15.PNG)
 
+#### Update Page 
+![9](https://user-images.githubusercontent.com/74780105/133992398-96ffe54c-4f8a-433c-9844-2ed69fb08c30.PNG)
+
 ### Add New Product Page
 ![8](https://user-images.githubusercontent.com/74780105/133838326-54ff6081-0c3f-4fce-b3bf-dbf1d957a560.PNG)
 
