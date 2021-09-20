@@ -15,7 +15,7 @@
 
 ### Customer
 #### Customer Page
-![4](https://user-images.githubusercontent.com/74780105/133837605-252f1793-4238-4805-9d43-02c3aa523de7.PNG)
+![11](https://user-images.githubusercontent.com/74780105/134001458-9d501b39-766e-4f52-8152-eaf088e2ea7e.PNG)
 
 #### Update Page 
 ![5](https://user-images.githubusercontent.com/74780105/133837764-67a71f19-8034-4c6a-a6cd-60e660261fde.PNG)
